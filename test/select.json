@@ -38,8 +38,8 @@
 {
 	"query": {
 		"select": {
-			"key": ["concept","anno"],
-			"value": ["company_size"]
+			"key": ["concept"],
+			"value": ["domain"]
 		},
 		"from": "concepts"
 	},
