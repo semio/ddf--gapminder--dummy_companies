@@ -1,0 +1,64 @@
+[
+{
+	"query": {
+		"select": {
+			"key": ["company","anno"],
+			"value": ["company_size"]
+		},
+		"from": "datapoints"
+	},
+	"response": {
+	  "headers": [ "company", "anno", "company_size"],
+	  "rows": [
+	    ["mic", "1975", "small" ],
+	    ["mic", "2015", "large" ],
+	    ["mic", "2016", "large" ],
+	    ["gap", "2015", "small" ],
+	    ["gap", "2016", "small" ]
+	  ]
+	}
+},
+{
+	"query": {
+		"select": {
+			"key": ["company"],
+			"value": ["name", "country"]
+		},
+		"from": "entities"
+	},
+	"response": {
+	  "headers": [ "company", "name", "country"],
+	  "rows": [
+	    ["mic", "Microsoft", "United States of America"],
+	    ["gap", "Gapminder", "Sweden"],
+	    ["valor", "Valor Sotware", "Ukraine"]
+	  ]
+	}
+},
+{
+	"query": {
+		"select": {
+			"key": ["concept","anno"],
+			"value": ["company_size"]
+		},
+		"from": "concepts"
+	},
+	"response": {
+	  "headers": [ "concept", "domain"],
+	  "rows": [
+	    ["company", ""],
+	    ["english_speaking_company", "company"],
+	    ["foundation", "company"],
+	    ["name", ""],
+	    ["anno", "year"],
+	    ["lines_of_code", ""],
+	    ["region", ""],
+	    ["country", ""],
+	    ["company_size", ""],
+	    ["num_users", ""],
+	    ["latitude", ""],
+	    ["longitude", ""]
+	  ]
+	}
+}
+]
