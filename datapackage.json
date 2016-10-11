@@ -19,5 +19,6 @@
 		{ "path": "ddf--entities--company_size.csv", "name": "ddf--entities--company_size" },
 		{ "path": "ddf--entities--project.csv", "name": "ddf--entities--project" },
 		{ "path": "ddf--entities--region.csv", "name": "ddf--entities--region" },
+		{ "path": "ddf--index.csv", "name": "ddf--index" }
 	]
 }
