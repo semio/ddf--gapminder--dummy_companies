@@ -1,0 +1,23 @@
+{
+	"name": "ddf--gapminder--dummy_companies",
+	"title": "Gapminder's Dummy Company dataset",
+	"description": "A dummy dataset for showing the DDF dataformat",
+	"version": "0.0.1",
+	"language": "en",
+	"license": "foo",
+	"author": "Jasper Heeffer <jasper@gapminder.org> (http://gapminder.org)",
+	"resources": [
+		{ "path": "ddf--concepts.csv", "name": "ddf--concepts" },
+		{ "path": "ddf--datapoints--company_size--by--company--anno.csv", "name": "ddf--datapoints--company_size--by--company--anno" },
+		{ "path": "ddf--datapoints--company_size_string--by--company--anno.csv", "name": "ddf--datapoints--company_size_string--by--company--anno" },
+		{ "path": "ddf--datapoints--lines_of_code--by--company--anno.csv", "name": "ddf--datapoints--lines_of_code--by--company--anno" },
+		{ "path": "ddf--datapoints--lines_of_code--by--company--project--anno.csv", "name": "ddf--datapoints--lines_of_code--by--company--project--anno" },
+		{ "path": "ddf--datapoints--lines_of_code--by--company--project.csv", "name": "ddf--datapoints--lines_of_code--by--company--project" }
+		{ "path": "ddf--entities--company--english_speaking.csv", "name": "ddf--entities--company--english_speaking" },
+		{ "path": "ddf--entities--company--foundation.csv", "name": "ddf--entities--company--foundation" },
+		{ "path": "ddf--entities--company.csv", "name": "ddf--entities--company" },
+		{ "path": "ddf--entities--company_size.csv", "name": "ddf--entities--company_size" },
+		{ "path": "ddf--entities--project.csv", "name": "ddf--entities--project" },
+		{ "path": "ddf--entities--region.csv", "name": "ddf--entities--region" },
+	]
+}
