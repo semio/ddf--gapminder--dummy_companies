@@ -2,7 +2,7 @@
 	"name": "ddf--gapminder--dummy_companies",
 	"title": "Gapminder's Dummy Company dataset",
 	"description": "A dummy dataset for showing the DDF dataformat",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"language": { "en": "English" },
 	"translations": { "nl-nl": "Dutch" },
 	"license": "foo",
