@@ -13,13 +13,17 @@
 		{ "path": "ddf--datapoints--company_size_string--by--company--anno.csv", "name": "ddf--datapoints--company_size_string--by--company--anno" },
 		{ "path": "ddf--datapoints--lines_of_code--by--company--anno.csv", "name": "ddf--datapoints--lines_of_code--by--company--anno" },
 		{ "path": "ddf--datapoints--lines_of_code--by--company--project--anno.csv", "name": "ddf--datapoints--lines_of_code--by--company--project--anno" },
-		{ "path": "ddf--datapoints--lines_of_code--by--company--project.csv", "name": "ddf--datapoints--lines_of_code--by--company--project" }
+		{ "path": "ddf--datapoints--lines_of_code--by--company--project.csv", "name": "ddf--datapoints--lines_of_code--by--company--project" },
 		{ "path": "ddf--entities--company--english_speaking.csv", "name": "ddf--entities--company--english_speaking" },
 		{ "path": "ddf--entities--company--foundation.csv", "name": "ddf--entities--company--foundation" },
 		{ "path": "ddf--entities--company.csv", "name": "ddf--entities--company" },
 		{ "path": "ddf--entities--company_size.csv", "name": "ddf--entities--company_size" },
 		{ "path": "ddf--entities--project.csv", "name": "ddf--entities--project" },
 		{ "path": "ddf--entities--region.csv", "name": "ddf--entities--region" },
-		{ "path": "ddf--index.csv", "name": "ddf--index" }
+		{ "path": "ddf--index.csv", "name": "ddf--index" },
+		{ "path": "ddf--translation--nl-nl--datapoints--company_size_string--by--company--anno.csv", "name": "ddf--translation--nl-nl--datapoints--company_size_string--by--company--anno" },
+		{ "path": "ddf--translation--nl-nl--entities--company.csv", "name": "ddf--translation--nl-nl--entities--company" },
+		{ "path": "ddf--translation--nl-nl--entities--company_size.csv", "name": "ddf--translation--nl-nl--entities--company_size" },
+		{ "path": "ddf--translation--nl-nl--entities--region.csv", "name": "ddf--translation--nl-nl--entities--region" }
 	]
 }
