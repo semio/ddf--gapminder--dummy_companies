@@ -21,9 +21,9 @@
 		{ "path": "ddf--entities--project.csv", "name": "ddf--entities--project" },
 		{ "path": "ddf--entities--region.csv", "name": "ddf--entities--region" },
 		{ "path": "ddf--index.csv", "name": "ddf--index" },
-		{ "path": "ddf--translation--nl-nl--datapoints--company_size_string--by--company--anno.csv", "name": "ddf--translation--nl-nl--datapoints--company_size_string--by--company--anno" },
-		{ "path": "ddf--translation--nl-nl--entities--company.csv", "name": "ddf--translation--nl-nl--entities--company" },
-		{ "path": "ddf--translation--nl-nl--entities--company_size.csv", "name": "ddf--translation--nl-nl--entities--company_size" },
-		{ "path": "ddf--translation--nl-nl--entities--region.csv", "name": "ddf--translation--nl-nl--entities--region" }
+		{ "path": "lang/nl-nl/ddf--datapoints--company_size_string--by--company--anno.csv", "name": "ddf--datapoints--company_size_string--by--company--anno" },
+		{ "path": "lang/nl-nl/ddf--entities--company.csv", "name": "ddf--entities--company" },
+		{ "path": "lang/nl-nl/ddf--entities--company_size.csv", "name": "ddf--entities--company_size" },
+		{ "path": "lang/nl-nl/ddf--entities--region.csv", "name": "ddf--entities--region" }
 	]
 }
