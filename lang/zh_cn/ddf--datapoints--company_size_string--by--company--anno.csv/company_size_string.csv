@@ -1,6 +1,6 @@
 company,anno,company_size_string
-mic,1975,small
-mic,2015,large
-mic,2016,large
-gap,2015,small
-gap,2016,small
+mic,1975,小型
+mic,2015,大型
+mic,2016,大型
+gap,2015,小型
+gap,2016,大型
