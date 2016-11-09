@@ -1,7 +1,10 @@
 concept,concept_type,domain
+domain,string,
 company,entity_domain,
 english_speaking_company,entity_set,company
 foundation,entity_set,company
+full_name,string,
+size,measure,
 name,string,
 anno,time,year
 lines_of_code,measure,
