@@ -90,10 +90,10 @@
 		{ "path": "ddf--entities--company--foundation.csv", "name": "ddf--entities--company--foundation",
 			"schema": {
 				"fields": [
-					{ "name": "foundation" },
+					{ "name": "company" },
 					{ "name": "is--foundation" }
 				],
-				"primaryKey": "foundation"
+				"primaryKey": "company"
 			}
 		 },
 		{ "path": "ddf--entities--company.csv", "name": "ddf--entities--company",
