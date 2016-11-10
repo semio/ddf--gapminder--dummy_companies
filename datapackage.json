@@ -134,6 +134,18 @@
 				],
 				"primaryKey": "region"
 			}
-		 }
+		},
+		{
+			"path": "extra companies/ddf--entities--company.csv",
+			"name": "ddf--entities--company-2",
+			"schema": {
+				"fields": [
+					{ "name": "company" },
+					{ "name": "name" },
+					{ "name": "country" }
+				],
+				"primaryKey": "company"
+			}
+		}
 	]
 }
