@@ -4,7 +4,10 @@
 	"description": "A dummy dataset for showing the DDF dataformat",
 	"version": "0.0.2",
 	"language": { "id": "en", "name": "English" },
-	"translations": { "id": "nl-nl", "name": "Nederlands (Nederland)" },
+	"translations": [
+		{ "id": "nl-nl", "name": "Nederlands (Nederland)" },
+		{ "id": "de", "name": "Deutsch" },
+	]
 	"license": "foo",
 	"author": "Jasper Heeffer <jasper@gapminder.org> (http://gapminder.org)",
 	"resources": [
@@ -77,7 +80,7 @@
 				"primaryKey": ["company","project"]
 			}
 		 },
-		{ "path": "ddf--entities--company--english_speaking.csv", "name": "ddf--entities--company--english_speaking",
+		{ "path": "ddf--entities--company--english_speaking_company.csv", "name": "ddf--entities--company--english_speaking_company",
 			"schema": {
 				"fields": [
 					{ "name": "english_speaking_company" },
