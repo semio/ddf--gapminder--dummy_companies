@@ -1,0 +1,63 @@
+Frequency,Word,Category
+402,crooked,Dishonest
+146,dishonest,Dishonest
+60,rigged,Dishonest
+88,biased,Dishonest
+50,phony,Dishonest
+152,liar,Dishonest
+38,fraud,Dishonest
+36,false,Dishonest
+36,corrupt,Dishonest
+218,failure,Failure
+62,terrible,Failure
+60,worst,Failure
+52,disaster,Failure
+102,loser,Failure
+38,zero,Failure
+22,badly,Failure
+20,wrong,Failure
+20,worse,Failure
+20,ineffective,Failure
+18,fired,Failure
+16,mess,Failure
+16,horrible,Failure
+14,unfit,Failure
+14,poorly,Failure
+156,bad,General Insult
+68,sad,General Insult
+50,dumb,General Insult
+44,boring,General Insult
+38,goofy,General Insult
+62,dopey,General Insult
+34,dummy,General Insult
+32,crazy,General Insult
+28,clown,General Insult
+26,overrated,General Insult
+24,illegal,General Insult
+22,negative,General Insult
+22,dumbest,General Insult
+20,stupid,General Insult
+20,nasty,General Insult
+20,irrelevant,General Insult
+20,hypocrite,General Insult
+20,dog,General Insult
+18,puppet,General Insult
+18,disloyal,General Insult
+18,disgrace,General Insult
+16,disgusting,General Insult
+14,poor,General Insult
+14,dying,General Insult
+12,waste,General Insult
+12,ridiculous,General Insult
+10,sleepy,General Insult
+10,ashamed,General Insult
+80,weak,Weak
+64,lightweight,Weak
+36,incompetent,Weak
+34,little,Weak
+26,joke,Weak
+22,pathetic,Weak
+20,desperate,Weak
+18,choker,Weak
+10,small,Weak
+10,embarrassed,Weak

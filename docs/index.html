@@ -2,43 +2,89 @@
 layout: default
 ---
 
-<header>
-	<div class="container">
-	<h1 property="dct:title">{{ site.title }}</h1>
-	</div>
-</header>
+  <div class='container'>
+  <div class="well pull-right">
+    <p><a class="btn btn-primary btn-block" href="datapackage.json"><i class="fa fa-cloud-download"></i> Download Datapackage</a></p>
+    <p><a class="btn btn-default btn-block" href="{{ site.github.repository_url }}"><i class="fa fa-github"></i> View on GitHub</a></p>
+    <p><a class="btn btn-default btn-block" href="{{ site.github.repository_url }}/commits/gh-pages.atom"><i class="fa fa-rss"></i> Subscribe to changes</a></p>
+  </div>
 
-<div class='container main-default' id='main'>
+  <h1 property="dct:title">{{ site.data.datapackage.title }}</h1>
 
-<p property="dct:description">{{ site.description }}</p>
+  <p property="dct:description">{{ site.data.datapackage.description }}</p>
 
-<div property="dct:publisher" resource="{{ site.publisher_url }}">
-	<h2 property="rdfs:label">Publisher</h2>
-	<a href="{{ site.publisher_url }}" about="{{ site.publisher_url }}" property="foaf:homepage">
-		<span property="foaf:name">{{ site.publisher_text }}</span>
-	</a>
-</div>
+  <p property="dct:license" resource="{{ site.data.datapackage.licenses.first['url'] }}">
+    <strong>License</strong><br />
+    <a href="{{ site.data.datapackage.licenses.first['url'] }}"><span property="dct:title">{{ site.data.datapackage.licenses.first['title'] }}</span></a>
+  </p>
 
+  <p property="dct:publisher" resource="{{ site.data.datapackage.publishers.first['web'] }}">
+  	<strong property="rdfs:label">Publisher</strong><br />
+  	<a href="{{ site.data.datapackage.publishers.first.['web'] }}" about="{{ site.data.datapackage.publishers.first['web'] }}" property="foaf:homepage">
+  		<span property="foaf:name">{{ site.data.datapackage.publishers.first['name'] }}</span>
+  	</a>
+  </p>
 
-<div property="dct:rights" resource="#rights" typeof="odrs:RightsStatement">
-	<h2 property="rdfs:label">License</h2>
-	<div property="dct:license odrs:dataLicense odrs:contentLicense" resource="{{ site.license_url }}">
-		<a href="{{ site.license_url }}"><span property="dct:title">{{ site.license_text }}</span></a>
-	</div>
-</div>
+  <p>
+  	<strong property="rdfs:label">Update frequency</strong><br />
+  	<span property="dcat:accrualPeriodicity">{{ site.update_frequency }}</span>
+  </p>
 
-<div>
-	<h2 property="rdfs:label">Update frequency</h2>
-	<span property="dcat:accrualPeriodicity">{{ site.frequency }}</span>
-</div>
+  <h2>Files</h2>
 
-<div>
-	<h2 property="rdfs:label">Open Data Certificate</h2>
-	{{ site.certificate_embed }}
-</div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Format</th>
+        <th>Description</th>
+        <th>Data</th>
+        <th>Download</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for resource in site.data.datapackage.resources %}
+      <tr property='dcat:distribution' typeof='dcat:Distribution'>
+        <td property="dcat:title">{{ resource.name }}</td>
+        <td property="dcat:format">{{ resource.mediatype }}</td>
+        <td property="dcat:description">{{ resource.description }}</td>
+	      <td><a href="{{ resource.path | split:"." | first }}"><i class="fa fa-search"></i> View</a></td>
+        <td><a href="{{ resource.path }}" property='dcat:accessURL'><i class="fa fa-cloud-download"></i> Download</a></td>
+        {% unless resource.path contains 'http' %}
+          <td><a href="http://csvlint.io/?uri={{ site.github.url }}/{{ resource.path }}"><img src="http://csvlint.io/?uri={{ site.github.url }}/{{ resource.path }}&format=svg" alt="CSVlint validation result" /></a></td>
+        {% else %}
+          <td><a href="http://csvlint.io/?uri={{ resource.path }}"><img src="http://csvlint.io/?uri={{ resource.path }}&format=svg" alt="CSVlint validation result" /></a></td>
+        {% endunless %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 
-{% include data.html %}
+  {% assign index_length = 0 %}
 
-{% include github.html %}
+  {% for item in site.data.index %}
+    {% assign index_length = forloop.length %}
+  {% endfor %}
 
-</div>
+  {% if index_length > 0 %}
+    <h2>API</h2>
+
+    <ul>
+      {% for item in site.data.index %}
+        <li><a href="{{ item['url'] | | remove: '.json'}}">{{ item['url'] | | remove: '.json' | capitalize}}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <script src="{{ site.certificate_url }}"></script>
+
+  <h2>Support</h2>
+
+    <p>If you have support queries, suggestions or corrections to the data, please <a href="{{ site.github.issues_url }}" target="_blank">file a new issue</a> in our GitHub repository.</p>
+
+	  <p>All comments and subsequent fixes will be <a href="{{ site.github.issues_url }}" target="_blank">logged openly</a> such that you can easily see the provenance of each object in this dataset.</p>
+
+    <p class="lastUpdate text-right">Last update: {{ site.time | date: '%Y-%m-%d at %H:%M' }}</p>
+
+  </div>
