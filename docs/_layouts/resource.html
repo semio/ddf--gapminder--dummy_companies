@@ -3,17 +3,20 @@ layout: default
 ---
 
 {% assign path = page.path | split:"." | first | split:"/" %}
-{% assign resource_path = page.path | split:"." | first | append:".csv" %}
+{% assign resource_path = page.path | split:"/" | last | split: "." | first | append:".csv" %}
 
 {% assign path0 = path[0] %}
 {% assign path1 = path[1] %}
 {% assign data_table = site.data[path0][path1] %}
+{% assign source_url = "https://raw.githubusercontent.com/semio/ddf--gapminder--dummy_companies/master/" %}
 
 {% for r in site.data.datapackage.resources %}
   {% if r.path == resource_path %}
     {% assign resource = r %}
   {% endif %}
 {% endfor %}
+
+{% assign full_url = source_url | append: resource_path %}
 
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
@@ -28,7 +31,7 @@ layout: default
 <h1>{{ resource.name }}</h1>
 
 <div class="table-container">
-  {% include data_table.html source = resource.path %}
+  {% include data_table.html source = full_url %}
 </div>
 
 {% assign csvlint = resource.links | where:"name","CSV Validation" | first %}
