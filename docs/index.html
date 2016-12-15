@@ -29,6 +29,10 @@ layout: default
   	<strong property="rdfs:label">Update frequency</strong><br />
   	<span property="dcat:accrualPeriodicity">{{ site.update_frequency }}</span>
   </p>
+  <p>
+  	<strong property="rdfs:label">Version history</strong><br />
+    <span><a href="changelog/">link</a></span>
+  </p>
 
   <h2>Files</h2>
 
@@ -49,10 +53,10 @@ layout: default
         <td property="dcat:title">{{ resource.name }}</td>
         <td property="dcat:format">{{ resource.mediatype }}</td>
         <td property="dcat:description">{{ resource.description }}</td>
-	      <td><a href="{{ resource.path | split:"." | first }}"><i class="fa fa-search"></i> View</a></td>
+	      <td><a href="data/{{ resource.path | split:"." | first }}"><i class="fa fa-search"></i> View</a></td>
         <td><a href="{{ resource.path }}" property='dcat:accessURL'><i class="fa fa-cloud-download"></i> Download</a></td>
         {% unless resource.path contains 'http' %}
-          <td><a href="http://csvlint.io/?uri={{ site.github.url }}/{{ resource.path }}"><img src="http://csvlint.io/?uri={{ site.github.url }}/{{ resource.path }}&format=svg" alt="CSVlint validation result" /></a></td>
+          <td><a href="http://csvlint.io/?uri={{ site.github.url }}/data/{{ resource.path }}"><img src="http://csvlint.io/?uri={{ site.github.url }}/{{ resource.path }}&format=svg" alt="CSVlint validation result" /></a></td>
         {% else %}
           <td><a href="http://csvlint.io/?uri={{ resource.path }}"><img src="http://csvlint.io/?uri={{ resource.path }}&format=svg" alt="CSVlint validation result" /></a></td>
         {% endunless %}

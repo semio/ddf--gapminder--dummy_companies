@@ -23,11 +23,16 @@
   $('#loading').show()
   $('#data-table-body').hide()
 
-  Papa.parse('{{ include.source }}', {
+  data = Papa.parse('{{ include.source }}', {
     download: true,
-    worker: false,
-    header: false,
-    complete: function() {
+    header: true,
+    complete: function(result, file) {
+      console.log(result)
+      data = result.data;
+      $('#data-table-body').append(dataRow(result.meta.fields));
+      $.each(data, function(idx, row){
+        $('#data-table-body').append(dataRow(row));
+      })
       $('#loading').hide()
       $('#data-table-body').show()
       $('#download-csv').removeClass('hidden')
