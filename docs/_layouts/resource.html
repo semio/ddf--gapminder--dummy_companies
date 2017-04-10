@@ -9,6 +9,7 @@ layout: default
 {% assign path1 = path[1] %}
 {% assign data_table = site.data[path0][path1] %}
 {% assign source_url = "https://raw.githubusercontent.com/semio/ddf--gapminder--dummy_companies/master/" %}
+{% assign raw_url = "https://rawgit.com/semio/ddf--gapminder--dummy_companies/master/" %}
 
 {% for r in site.data.datapackage.resources %}
   {% if r.path == resource_path %}
@@ -36,4 +37,4 @@ layout: default
 
 {% assign csvlint = resource.links | where:"name","CSV Validation" | first %}
 
-<a class='btn btn-primary hidden' id='download-csv' href='{{ site.github.url }}/{{ resource.path }}'><i class='fa fa-cloud-download'></i> Download CSV</a>
+<a class='btn btn-primary hidden' id='download-csv' href='{{ raw_url }}/{{ resource.path }}'><i class='fa fa-cloud-download'></i> Download CSV</a>
