@@ -5,6 +5,7 @@
         "name": "English"
     },
     "author": "Jasper Heeffer <jasper@gapminder.org> (http://gapminder.org)",
+    "created": "2018-05-21T13:51:31.069219+00:00",
     "description": "A dummy dataset for showing the DDF dataformat",
     "license": "foo",
     "title": "Gapminder's Dummy Company dataset",
@@ -19,7 +20,6 @@
         }
     ],
     "version": "0.0.2",
-    "created": "2018-05-21T13:19:00.744096+00:00",
     "resources": [
         {
             "path": "ddf--concepts.csv",
@@ -248,6 +248,45 @@
                     }
                 ],
                 "primaryKey": "region"
+            }
+        },
+        {
+            "path": "ddf--synonyms--company.csv",
+            "name": "ddf--synonyms--company",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "company"
+                    },
+                    {
+                        "name": "synonym"
+                    },
+                    {
+                        "name": "source"
+                    }
+                ],
+                "primaryKey": [
+                    "synonym",
+                    "company"
+                ]
+            }
+        },
+        {
+            "path": "ddf--synonyms--region.csv",
+            "name": "ddf--synonyms--region",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "region"
+                    },
+                    {
+                        "name": "synonym"
+                    }
+                ],
+                "primaryKey": [
+                    "synonym",
+                    "region"
+                ]
             }
         },
         {
@@ -480,6 +519,16 @@
         "datapoints": [
             {
                 "primaryKey": [
+                    "region",
+                    "synonym"
+                ],
+                "value": null,
+                "resources": [
+                    "ddf--synonyms--region"
+                ]
+            },
+            {
+                "primaryKey": [
                     "anno",
                     "company"
                 ],
@@ -629,6 +678,36 @@
                 "value": "lines_of_code",
                 "resources": [
                     "ddf--datapoints--lines_of_code--by--company--project"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "company",
+                    "synonym"
+                ],
+                "value": "source",
+                "resources": [
+                    "ddf--synonyms--company"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "english_speaking_company",
+                    "synonym"
+                ],
+                "value": "source",
+                "resources": [
+                    "ddf--synonyms--company"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "foundation",
+                    "synonym"
+                ],
+                "value": "source",
+                "resources": [
+                    "ddf--synonyms--company"
                 ]
             }
         ]
