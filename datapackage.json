@@ -5,7 +5,7 @@
         "name": "English"
     },
     "author": "Jasper Heeffer <jasper@gapminder.org> (http://gapminder.org)",
-    "created": "2018-05-21T13:51:31.069219+00:00",
+    "created": "2018-05-22T01:48:08.685850+00:00",
     "description": "A dummy dataset for showing the DDF dataformat",
     "license": "foo",
     "title": "Gapminder's Dummy Company dataset",
@@ -671,15 +671,15 @@
                 ]
             }
         ],
-        "synonyms": [
+        "synonym": [
             {
                 "primaryKey": [
-                    "region",
+                    "foundation",
                     "synonym"
                 ],
-                "value": null,
+                "value": "source",
                 "resources": [
-                    "ddf--synonyms--region"
+                    "ddf--synonyms--company"
                 ]
             },
             {
@@ -704,12 +704,12 @@
             },
             {
                 "primaryKey": [
-                    "foundation",
+                    "region",
                     "synonym"
                 ],
-                "value": "source",
+                "value": null,
                 "resources": [
-                    "ddf--synonyms--company"
+                    "ddf--synonyms--region"
                 ]
             }
         ]
