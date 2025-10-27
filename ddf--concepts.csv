@@ -6,7 +6,7 @@ foundation,entity_set,company
 full_name,string,
 size,measure,
 name,string,
-anno,time,year
+time,time,year
 lines_of_code,measure,
 region,entity_domain,
 country,string,

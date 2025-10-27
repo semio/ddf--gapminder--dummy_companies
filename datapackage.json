@@ -1,22 +1,22 @@
 {
     "name": "ddf--gapminder--dummy_companies",
-    "language": {
-        "id": "en",
-        "name": "English"
-    },
     "title": "Gapminder's Dummy Company dataset",
     "description": "A dummy dataset for showing the DDF dataformat",
     "author": "Jasper Heeffer <jasper@gapminder.org> (http://gapminder.org)",
     "license": "foo",
-    "created": "2024-08-06T03:17:38.621880+00:00",
+    "language": {
+        "name": "English",
+        "id": "en"
+    },
+    "created": "2025-10-27T03:17:23.930Z",
     "translations": [
         {
-            "id": "nl-nl",
-            "name": "Nederlands (Nederland)"
+            "name": "Nederlands (Nederland)",
+            "id": "nl-nl"
         },
         {
-            "id": "de",
-            "name": "Deutsch"
+            "name": "Deutsch",
+            "id": "de"
         }
     ],
     "version": "0.0.2",
@@ -38,115 +38,6 @@
                 ],
                 "primaryKey": [
                     "concept"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--company_size--by--company--anno",
-            "path": "ddf--datapoints--company_size--by--company--anno.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "company"
-                    },
-                    {
-                        "name": "anno"
-                    },
-                    {
-                        "name": "company_size"
-                    }
-                ],
-                "primaryKey": [
-                    "company",
-                    "anno"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--company_size_string--by--company--anno",
-            "path": "ddf--datapoints--company_size_string--by--company--anno.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "company"
-                    },
-                    {
-                        "name": "anno"
-                    },
-                    {
-                        "name": "company_size_string"
-                    }
-                ],
-                "primaryKey": [
-                    "company",
-                    "anno"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--lines_of_code--by--company--anno",
-            "path": "ddf--datapoints--lines_of_code--by--company--anno.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "company"
-                    },
-                    {
-                        "name": "anno"
-                    },
-                    {
-                        "name": "lines_of_code"
-                    }
-                ],
-                "primaryKey": [
-                    "company",
-                    "anno"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--lines_of_code--by--company--project--anno",
-            "path": "ddf--datapoints--lines_of_code--by--company--project--anno.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "company"
-                    },
-                    {
-                        "name": "project"
-                    },
-                    {
-                        "name": "anno"
-                    },
-                    {
-                        "name": "lines_of_code"
-                    }
-                ],
-                "primaryKey": [
-                    "company",
-                    "project",
-                    "anno"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--lines_of_code--by--company--project",
-            "path": "ddf--datapoints--lines_of_code--by--company--project.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "company"
-                    },
-                    {
-                        "name": "project"
-                    },
-                    {
-                        "name": "lines_of_code"
-                    }
-                ],
-                "primaryKey": [
-                    "company",
-                    "project"
                 ]
             }
         },
@@ -265,6 +156,135 @@
             }
         },
         {
+            "name": "ddf--entities--company-1",
+            "path": "extra companies/ddf--entities--company.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "company"
+                    },
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "country"
+                    }
+                ],
+                "primaryKey": [
+                    "company"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--company_size--by--company--time",
+            "path": "ddf--datapoints--company_size--by--company--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "company"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "company_size"
+                    }
+                ],
+                "primaryKey": [
+                    "company",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--company_size_string--by--company--time",
+            "path": "ddf--datapoints--company_size_string--by--company--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "company"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "company_size_string"
+                    }
+                ],
+                "primaryKey": [
+                    "company",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--lines_of_code--by--company--project",
+            "path": "ddf--datapoints--lines_of_code--by--company--project.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "company"
+                    },
+                    {
+                        "name": "project"
+                    },
+                    {
+                        "name": "lines_of_code"
+                    }
+                ],
+                "primaryKey": [
+                    "company",
+                    "project"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--lines_of_code--by--company--project--time",
+            "path": "ddf--datapoints--lines_of_code--by--company--project--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "company"
+                    },
+                    {
+                        "name": "project"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "lines_of_code"
+                    }
+                ],
+                "primaryKey": [
+                    "company",
+                    "project",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--lines_of_code--by--company--time",
+            "path": "ddf--datapoints--lines_of_code--by--company--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "company"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "lines_of_code"
+                    }
+                ],
+                "primaryKey": [
+                    "company",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--synonyms--company",
             "path": "ddf--synonyms--company.csv",
             "schema": {
@@ -302,26 +322,6 @@
                     "region"
                 ]
             }
-        },
-        {
-            "name": "ddf--entities--company-1",
-            "path": "extra companies/ddf--entities--company.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "company"
-                    },
-                    {
-                        "name": "name"
-                    },
-                    {
-                        "name": "country"
-                    }
-                ],
-                "primaryKey": [
-                    "company"
-                ]
-            }
         }
     ],
     "ddfSchema": {
@@ -348,37 +348,48 @@
         "entities": [
             {
                 "primaryKey": [
-                    "project"
+                    "company"
                 ],
-                "value": null,
+                "value": "country",
                 "resources": [
-                    "ddf--entities--project"
+                    "ddf--entities--company-1",
+                    "ddf--entities--company"
                 ]
             },
             {
                 "primaryKey": [
                     "company"
                 ],
-                "value": "country",
+                "value": "is--english_speaking_company",
                 "resources": [
+                    "ddf--entities--company--english_speaking_company"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "company"
+                ],
+                "value": "is--foundation",
+                "resources": [
+                    "ddf--entities--company--foundation"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "company"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--company-1",
                     "ddf--entities--company",
-                    "ddf--entities--company-1"
+                    "ddf--entities--company--english_speaking_company"
                 ]
             },
             {
                 "primaryKey": [
-                    "english_speaking_company"
+                    "company"
                 ],
-                "value": "country",
-                "resources": [
-                    "ddf--entities--company"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "foundation"
-                ],
-                "value": "country",
+                "value": "region",
                 "resources": [
                     "ddf--entities--company"
                 ]
@@ -394,6 +405,107 @@
             },
             {
                 "primaryKey": [
+                    "english_speaking_company"
+                ],
+                "value": "country",
+                "resources": [
+                    "ddf--entities--company"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "english_speaking_company"
+                ],
+                "value": "is--english_speaking_company",
+                "resources": [
+                    "ddf--entities--company--english_speaking_company"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "english_speaking_company"
+                ],
+                "value": "is--foundation",
+                "resources": [
+                    "ddf--entities--company--foundation"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "english_speaking_company"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--company",
+                    "ddf--entities--company--english_speaking_company"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "english_speaking_company"
+                ],
+                "value": "region",
+                "resources": [
+                    "ddf--entities--company"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "foundation"
+                ],
+                "value": "country",
+                "resources": [
+                    "ddf--entities--company"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "foundation"
+                ],
+                "value": "is--english_speaking_company",
+                "resources": [
+                    "ddf--entities--company--english_speaking_company"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "foundation"
+                ],
+                "value": "is--foundation",
+                "resources": [
+                    "ddf--entities--company--foundation"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "foundation"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--company",
+                    "ddf--entities--company--english_speaking_company"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "foundation"
+                ],
+                "value": "region",
+                "resources": [
+                    "ddf--entities--company"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "project"
+                ],
+                "value": null,
+                "resources": [
+                    "ddf--entities--project"
+                ]
+            },
+            {
+                "primaryKey": [
                     "region"
                 ],
                 "value": "full_name",
@@ -403,123 +515,11 @@
             },
             {
                 "primaryKey": [
-                    "company"
-                ],
-                "value": "is--english_speaking_company",
-                "resources": [
-                    "ddf--entities--company--english_speaking_company"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "english_speaking_company"
-                ],
-                "value": "is--english_speaking_company",
-                "resources": [
-                    "ddf--entities--company--english_speaking_company"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "foundation"
-                ],
-                "value": "is--english_speaking_company",
-                "resources": [
-                    "ddf--entities--company--english_speaking_company"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "company"
-                ],
-                "value": "is--foundation",
-                "resources": [
-                    "ddf--entities--company--foundation"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "english_speaking_company"
-                ],
-                "value": "is--foundation",
-                "resources": [
-                    "ddf--entities--company--foundation"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "foundation"
-                ],
-                "value": "is--foundation",
-                "resources": [
-                    "ddf--entities--company--foundation"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "company"
-                ],
-                "value": "name",
-                "resources": [
-                    "ddf--entities--company",
-                    "ddf--entities--company--english_speaking_company",
-                    "ddf--entities--company-1"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "english_speaking_company"
-                ],
-                "value": "name",
-                "resources": [
-                    "ddf--entities--company",
-                    "ddf--entities--company--english_speaking_company"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "foundation"
-                ],
-                "value": "name",
-                "resources": [
-                    "ddf--entities--company",
-                    "ddf--entities--company--english_speaking_company"
-                ]
-            },
-            {
-                "primaryKey": [
                     "region"
                 ],
                 "value": "name",
                 "resources": [
                     "ddf--entities--region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "company"
-                ],
-                "value": "region",
-                "resources": [
-                    "ddf--entities--company"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "english_speaking_company"
-                ],
-                "value": "region",
-                "resources": [
-                    "ddf--entities--company"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "foundation"
-                ],
-                "value": "region",
-                "resources": [
-                    "ddf--entities--company"
                 ]
             },
             {
@@ -535,135 +535,53 @@
         "datapoints": [
             {
                 "primaryKey": [
-                    "anno",
-                    "company"
-                ],
-                "value": "company_size",
-                "resources": [
-                    "ddf--datapoints--company_size--by--company--anno"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "anno",
-                    "english_speaking_company"
-                ],
-                "value": "company_size",
-                "resources": [
-                    "ddf--datapoints--company_size--by--company--anno"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "anno",
-                    "foundation"
-                ],
-                "value": "company_size",
-                "resources": [
-                    "ddf--datapoints--company_size--by--company--anno"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "anno",
-                    "company"
-                ],
-                "value": "company_size_string",
-                "resources": [
-                    "ddf--datapoints--company_size_string--by--company--anno"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "anno",
-                    "english_speaking_company"
-                ],
-                "value": "company_size_string",
-                "resources": [
-                    "ddf--datapoints--company_size_string--by--company--anno"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "anno",
-                    "foundation"
-                ],
-                "value": "company_size_string",
-                "resources": [
-                    "ddf--datapoints--company_size_string--by--company--anno"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "anno",
-                    "company"
-                ],
-                "value": "lines_of_code",
-                "resources": [
-                    "ddf--datapoints--lines_of_code--by--company--anno"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "anno",
-                    "company",
-                    "project"
-                ],
-                "value": "lines_of_code",
-                "resources": [
-                    "ddf--datapoints--lines_of_code--by--company--project--anno"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "anno",
-                    "english_speaking_company"
-                ],
-                "value": "lines_of_code",
-                "resources": [
-                    "ddf--datapoints--lines_of_code--by--company--anno"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "anno",
-                    "english_speaking_company",
-                    "project"
-                ],
-                "value": "lines_of_code",
-                "resources": [
-                    "ddf--datapoints--lines_of_code--by--company--project--anno"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "anno",
-                    "foundation"
-                ],
-                "value": "lines_of_code",
-                "resources": [
-                    "ddf--datapoints--lines_of_code--by--company--anno"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "anno",
-                    "foundation",
-                    "project"
-                ],
-                "value": "lines_of_code",
-                "resources": [
-                    "ddf--datapoints--lines_of_code--by--company--project--anno"
-                ]
-            },
-            {
-                "primaryKey": [
                     "company",
                     "project"
                 ],
                 "value": "lines_of_code",
                 "resources": [
                     "ddf--datapoints--lines_of_code--by--company--project"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "company",
+                    "project",
+                    "time"
+                ],
+                "value": "lines_of_code",
+                "resources": [
+                    "ddf--datapoints--lines_of_code--by--company--project--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "company",
+                    "time"
+                ],
+                "value": "company_size",
+                "resources": [
+                    "ddf--datapoints--company_size--by--company--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "company",
+                    "time"
+                ],
+                "value": "company_size_string",
+                "resources": [
+                    "ddf--datapoints--company_size_string--by--company--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "company",
+                    "time"
+                ],
+                "value": "lines_of_code",
+                "resources": [
+                    "ddf--datapoints--lines_of_code--by--company--time"
                 ]
             },
             {
@@ -678,20 +596,101 @@
             },
             {
                 "primaryKey": [
+                    "english_speaking_company",
+                    "project",
+                    "time"
+                ],
+                "value": "lines_of_code",
+                "resources": [
+                    "ddf--datapoints--lines_of_code--by--company--project--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "english_speaking_company",
+                    "time"
+                ],
+                "value": "company_size",
+                "resources": [
+                    "ddf--datapoints--company_size--by--company--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "english_speaking_company",
+                    "time"
+                ],
+                "value": "company_size_string",
+                "resources": [
+                    "ddf--datapoints--company_size_string--by--company--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "english_speaking_company",
+                    "time"
+                ],
+                "value": "lines_of_code",
+                "resources": [
+                    "ddf--datapoints--lines_of_code--by--company--time"
+                ]
+            },
+            {
+                "primaryKey": [
                     "foundation",
                     "project"
                 ],
                 "value": "lines_of_code",
                 "resources": [
                     "ddf--datapoints--lines_of_code--by--company--project"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "foundation",
+                    "project",
+                    "time"
+                ],
+                "value": "lines_of_code",
+                "resources": [
+                    "ddf--datapoints--lines_of_code--by--company--project--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "foundation",
+                    "time"
+                ],
+                "value": "company_size",
+                "resources": [
+                    "ddf--datapoints--company_size--by--company--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "foundation",
+                    "time"
+                ],
+                "value": "company_size_string",
+                "resources": [
+                    "ddf--datapoints--company_size_string--by--company--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "foundation",
+                    "time"
+                ],
+                "value": "lines_of_code",
+                "resources": [
+                    "ddf--datapoints--lines_of_code--by--company--time"
                 ]
             }
         ],
         "synonyms": [
             {
                 "primaryKey": [
-                    "company",
-                    "synonym"
+                    "company"
                 ],
                 "value": "source",
                 "resources": [
@@ -700,8 +699,7 @@
             },
             {
                 "primaryKey": [
-                    "english_speaking_company",
-                    "synonym"
+                    "english_speaking_company"
                 ],
                 "value": "source",
                 "resources": [
@@ -710,8 +708,7 @@
             },
             {
                 "primaryKey": [
-                    "foundation",
-                    "synonym"
+                    "foundation"
                 ],
                 "value": "source",
                 "resources": [
@@ -720,8 +717,7 @@
             },
             {
                 "primaryKey": [
-                    "region",
-                    "synonym"
+                    "region"
                 ],
                 "value": null,
                 "resources": [
